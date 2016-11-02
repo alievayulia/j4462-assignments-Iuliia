@@ -31,21 +31,6 @@ rows = table.find_all('tr')
 
 for row in rows:
 
-
-  # Here's one way to get all of the data into a list
-
-    # # Get all of the cells (td tags) for each row
-    # cells = row.find_all('td')
-
-    # # Create a new empty list to hold the output
-    # data = []
-
-    # # Loop over each cell in the row
-    # for cell in cells:
-    #     # Add the cell's data to the row_data output
-    #     data.append(cell.text)
-
-    # Here's another way to do it with list comprehensions
     data = [cell.text for cell in row.find_all('td')]
 
     writer.writerow(data)
