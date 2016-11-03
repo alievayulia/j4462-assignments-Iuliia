@@ -34,8 +34,3 @@ for row in rows:
     data = [cell.text.encode('utf-8') for cell in row.find_all('td')]
 
     writer.writerow(data)
-
-    # # Traceback (most recent call last):
-  # File "scraper_Iuliia.py", line 51, in <module>
-    # writer.writerow(data)
-# UnicodeEncodeError: 'ascii' codec can't encode character u'\xa0' in position 0: ordinal not in range(128)
