@@ -31,7 +31,7 @@ rows = table.find_all('tr')
 
 for row in rows:
 
-    data = [cell.text for cell in row.find_all('td')]
+    data = [cell.text.encode('utf-8') for cell in row.find_all('td')]
 
     writer.writerow(data)
 
