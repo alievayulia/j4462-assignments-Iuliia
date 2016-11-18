@@ -4,8 +4,16 @@ from sunlight.errors import BadRequestException
 import json
 
 active_legislators = openstates.legislators(
-    active='true')
+    active='true'
+)
 print(active_legislators)
+
+bills_2016 = openstates.bills(
+    created_at = "%2016%"
+)
+
+for bill in bills_2016:
+    print bill["title", "action"]
 
 
 #module_name = "openstates"
