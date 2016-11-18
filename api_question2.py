@@ -7,7 +7,7 @@ my_json = urllib2.urlopen('http://openstates.org/api/v1/bills/?state=mo&chamber=
 data = json.loads(my_json)
 
 for bills in data:
-    print bills['title'], bills['updated_at']
+    print bills
 
 # """{u'title': u'Modifies provisions relating to health care', u'created_at': u'2016-01-04 18:27:31', u'updated_at': u'2016-07-06 06:30:49', u'chamber': u'upper', u'state': u'mo', u'session': u'2016', u'subjects': [], u'type': [u'bill'], u'id': u'MOB00007968', u'bill_id': u'SB 635'}
 # {u'title': u'Modifies provisions relating to health care', u'created_at': u'2016-01-04 18:28:26', u'updated_at': u'2016-07-06 06:30:58', u'chamber': u'upper', u'state': u'mo', u'session': u'2016', u'subjects': [], u'type': [u'bill'], u'id': u'MOB00008130', u'bill_id': u'SB 608'}
