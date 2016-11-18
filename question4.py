@@ -7,4 +7,4 @@ my_json = urllib2.urlopen('http://openstates.org/api/v1/bills/?state=mo&chamber=
 data = json.loads(my_json)
 
 for bills in data:
-    print bills
+    print bills ["title"], bills ["updated_at"]
